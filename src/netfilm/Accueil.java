@@ -11,12 +11,11 @@ package netfilm;
  */
 public class Accueil extends javax.swing.JPanel {
 
-    /**
-     * Creates new form Accueil
-     */
     public Accueil() {
         initComponents();
        // jLFilm1.setIcon(new javax.swing.ImageIcon(getClass().getResource("../aaa.png")));
+       eConnexion = EtatConnexion.DECONNECT;
+       eType = EtatType.FILM;
     }
 
     /**
@@ -251,7 +250,8 @@ public class Accueil extends javax.swing.JPanel {
     }//GEN-LAST:event_jRFilmActionPerformed
 
     private static EtatType eType;
-    private static 
+    private static EtatConnexion eConnexion;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBAccueil;
     private javax.swing.JButton jBFAffiche;
