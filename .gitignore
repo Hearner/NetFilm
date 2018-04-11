@@ -1,9 +1,7 @@
-nbproject/private/
+nbproject/
 build/
 nbbuild/
 dist/
 nbdist/
-build.xml
-manifest.mf
 .nb-gradle/
 .DS_Store
