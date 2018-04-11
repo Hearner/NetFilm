@@ -11,13 +11,14 @@ import javax.swing.JFrame;
  *
  * @author Champeau
  */
-public class NetFilm extends javax.swing.JFrame  {
+public class NetFilm extends javax.swing.JFrame {
 
     /**
      * Creates new form NetFilm
      */
     public NetFilm() {
         initComponents();
+     //   accueil1.setVisible(false);
     }
 
     /**
@@ -29,22 +30,35 @@ public class NetFilm extends javax.swing.JFrame  {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+=======
+        accueil1 = new netfilm.Accueil();
+
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+>>>>>>> 3d9f4db616df23e431da7285fd468934c7ec5904
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 709, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(accueil1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGap(0, 543, Short.MAX_VALUE)
+=======
+            .addComponent(accueil1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+>>>>>>> 3d9f4db616df23e431da7285fd468934c7ec5904
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private netfilm.Accueil accueil1;
     // End of variables declaration//GEN-END:variables
 
 
@@ -77,11 +91,15 @@ public class NetFilm extends javax.swing.JFrame  {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+<<<<<<< HEAD
                 JFrame frame = new JFrame();
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.getContentPane().add(new Accueil());
                 frame.pack();
                 frame.setVisible(true);
+=======
+                new NetFilm().setVisible(true);
+>>>>>>> 3d9f4db616df23e431da7285fd468934c7ec5904
             }
         });
     }
