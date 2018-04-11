@@ -5,6 +5,8 @@
  */
 package netfilm;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Champeau
@@ -13,7 +15,6 @@ public class Accueil extends javax.swing.JPanel {
 
     public Accueil() {
         initComponents();
-       // jLFilm1.setIcon(new javax.swing.ImageIcon(getClass().getResource("../aaa.png")));
        eConnexion = EtatConnexion.DECONNECT;
        eType = EtatType.FILM;
     }
@@ -93,8 +94,14 @@ public class Accueil extends javax.swing.JPanel {
         jRCinema.setText("Cinéma");
 
         jBAccueil.setText("Accueil");
+        jBAccueil.setEnabled(false);
 
         jBFAffiche.setText("Films à l'affiche");
+        jBFAffiche.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBFAfficheActionPerformed(evt);
+            }
+        });
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setPreferredSize(new java.awt.Dimension(318, 250));
@@ -303,6 +310,15 @@ public class Accueil extends javax.swing.JPanel {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jBFAfficheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFAfficheActionPerformed
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.getContentPane().add(new FilmsALAffiche());
+        frame.pack();
+        frame.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jBFAfficheActionPerformed
 
     private static EtatType eType;
     private static EtatConnexion eConnexion;

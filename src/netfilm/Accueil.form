@@ -167,12 +167,16 @@
     <Component class="javax.swing.JButton" name="jBAccueil">
       <Properties>
         <Property name="text" type="java.lang.String" value="Accueil"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jBFAffiche">
       <Properties>
         <Property name="text" type="java.lang.String" value="Films &#xe0; l&apos;affiche"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBFAfficheActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
