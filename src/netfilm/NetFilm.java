@@ -24,6 +24,18 @@ public class NetFilm extends javax.swing.JFrame  {
         afficherAccueil();
     }
     
+    public void setEtatTypeFilm() {
+        et = EtatType.FILM;
+    }
+    
+    public void setEtatTypeCinema() {
+        et = EtatType.CINEMA;
+    }
+    
+    public EtatType getEtatType() {
+        return(et);
+    }
+    
     public void initDependencies() {
         jPanelConnecté1.init(this);
         jPanelDéconnecté1.init(this);
@@ -107,6 +119,30 @@ public class NetFilm extends javax.swing.JFrame  {
         jBFAffiche.setEnabled(true);
         jBMCompte.setEnabled(true);
         jBPSortie.setEnabled(false);
+    }
+    
+    public void afficherRechercheCinema() {
+        jPanel2.removeAll();
+        jPanel2.add(rechercheCinéma1);
+        jPanel2.repaint();
+        jPanel2.revalidate();
+        
+        jBAccueil.setEnabled(true);
+        jBFAffiche.setEnabled(true);
+        jBMCompte.setEnabled(true);
+        jBPSortie.setEnabled(true);
+    }
+    
+    public void afficherRechercheFilm() {
+        jPanel2.removeAll();
+        jPanel2.add(rechercheFilm1);
+        jPanel2.repaint();
+        jPanel2.revalidate();
+        
+        jBAccueil.setEnabled(true);
+        jBFAffiche.setEnabled(true);
+        jBMCompte.setEnabled(true);
+        jBPSortie.setEnabled(true);
     }
     
     /**
