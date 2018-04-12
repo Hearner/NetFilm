@@ -29,22 +29,209 @@ public class NetFilm extends javax.swing.JFrame  {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jBRechercher = new javax.swing.JButton();
+        textRechercherFilm = new javax.swing.JTextField();
+        jRFilm = new javax.swing.JRadioButton();
+        jRCinema = new javax.swing.JRadioButton();
+        jBAccueil = new javax.swing.JButton();
+        jBFAffiche = new javax.swing.JButton();
+        jBPSortie = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jBMCompte = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        filmsALAffiche1 = new netfilm.FilmsALAffiche();
+        rechercheFilm1 = new netfilm.RechercheFilm();
+        rechercheCinéma1 = new netfilm.RechercheCinéma();
+        prochainesSorties1 = new netfilm.ProchainesSorties();
+        pageFilm2 = new netfilm.PageFilm();
+        pageCinéma1 = new netfilm.PageCinéma();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jBRechercher.setText("Rechercher");
+
+        textRechercherFilm.setToolTipText("Rechercher un film, un cinéma...");
+        textRechercherFilm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textRechercherFilmActionPerformed(evt);
+            }
+        });
+
+        jRFilm.setSelected(true);
+        jRFilm.setText("Film");
+        jRFilm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRFilmActionPerformed(evt);
+            }
+        });
+
+        jRCinema.setText("Cinéma");
+
+        jBAccueil.setText("Accueil");
+        jBAccueil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBAccueilActionPerformed(evt);
+            }
+        });
+
+        jBFAffiche.setText("Films à l'affiche");
+        jBFAffiche.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBFAfficheActionPerformed(evt);
+            }
+        });
+
+        jBPSortie.setText("Prochaines sorties");
+        jBPSortie.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBPSortieActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
+        jLabel1.setText("NetFilm");
+
+        jBMCompte.setText("Mon compte");
+        jBMCompte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBMCompteActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
+        jLabel2.setText("Choisissez, Réservez, Profitez");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jBAccueil)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBFAffiche)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBPSortie)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBMCompte))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(textRechercherFilm, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jRFilm)
+                                .addGap(28, 28, 28)
+                                .addComponent(jRCinema)
+                                .addGap(57, 57, 57)))
+                        .addComponent(jBRechercher))
+                    .addComponent(jLabel2)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBAccueil)
+                    .addComponent(jBFAffiche)
+                    .addComponent(jBPSortie)
+                    .addComponent(jBMCompte))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textRechercherFilm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBRechercher))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRFilm)
+                    .addComponent(jRCinema))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.setLayout(new java.awt.CardLayout());
+        jPanel2.add(filmsALAffiche1, "card2");
+        jPanel2.add(rechercheFilm1, "card3");
+        jPanel2.add(rechercheCinéma1, "card4");
+        jPanel2.add(prochainesSorties1, "card5");
+        jPanel2.add(pageFilm2, "card6");
+        jPanel2.add(pageCinéma1, "card7");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 709, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 543, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void textRechercherFilmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textRechercherFilmActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textRechercherFilmActionPerformed
+
+    private void jRFilmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRFilmActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRFilmActionPerformed
+
+    private void jBMCompteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMCompteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBMCompteActionPerformed
+
+    private void jBAccueilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAccueilActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBAccueilActionPerformed
+
+    private void jBFAfficheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFAfficheActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBFAfficheActionPerformed
+
+    private void jBPSortieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPSortieActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBPSortieActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private netfilm.FilmsALAffiche filmsALAffiche1;
+    private javax.swing.JButton jBAccueil;
+    private javax.swing.JButton jBFAffiche;
+    private javax.swing.JButton jBMCompte;
+    private javax.swing.JButton jBPSortie;
+    private javax.swing.JButton jBRechercher;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JRadioButton jRCinema;
+    private javax.swing.JRadioButton jRFilm;
+    private netfilm.PageCinéma pageCinéma1;
+    private netfilm.PageFilm pageFilm2;
+    private netfilm.ProchainesSorties prochainesSorties1;
+    private netfilm.RechercheCinéma rechercheCinéma1;
+    private netfilm.RechercheFilm rechercheFilm1;
+    private javax.swing.JTextField textRechercherFilm;
     // End of variables declaration//GEN-END:variables
 
 
@@ -77,14 +264,13 @@ public class NetFilm extends javax.swing.JFrame  {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                JFrame frame = new JFrame();
+                /*JFrame frame = new JFrame();
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.getContentPane().add(new Accueil());
                 frame.pack();
-                frame.setVisible(true);
+                frame.setVisible(true);*/
+                new NetFilm().setVisible(true);
             }
         });
     }
-
-
 }

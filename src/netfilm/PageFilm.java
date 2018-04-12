@@ -27,16 +27,6 @@ public class PageFilm extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jBPSortie = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jBMCompte = new javax.swing.JButton();
-        jRCinema = new javax.swing.JRadioButton();
-        jLabel2 = new javax.swing.JLabel();
-        jBAccueil = new javax.swing.JButton();
-        jBRechercher = new javax.swing.JButton();
-        jBFAffiche = new javax.swing.JButton();
-        textRechercherFilm = new javax.swing.JTextField();
-        jRFilm = new javax.swing.JRadioButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jTabbedPane3 = new javax.swing.JTabbedPane();
@@ -57,44 +47,6 @@ public class PageFilm extends javax.swing.JPanel {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-
-        jBPSortie.setText("Prochaines sorties");
-
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
-        jLabel1.setText("NetFilm");
-
-        jBMCompte.setText("Mon compte");
-        jBMCompte.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBMCompteActionPerformed(evt);
-            }
-        });
-
-        jRCinema.setText("Cinéma");
-
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
-        jLabel2.setText("Choisissez, Réservez, Profitez");
-
-        jBAccueil.setText("Accueil");
-
-        jBRechercher.setText("Rechercher");
-
-        jBFAffiche.setText("Films à l'affiche");
-
-        textRechercherFilm.setToolTipText("Rechercher un film, un cinéma...");
-        textRechercherFilm.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textRechercherFilmActionPerformed(evt);
-            }
-        });
-
-        jRFilm.setSelected(true);
-        jRFilm.setText("Film");
-        jRFilm.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRFilmActionPerformed(evt);
-            }
-        });
 
         jTabbedPane1.addTab("Séances", jTabbedPane2);
         jTabbedPane1.addTab("Avis", jTabbedPane3);
@@ -213,57 +165,12 @@ public class PageFilm extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 695, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jBAccueil)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jBFAffiche)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jBPSortie)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jBMCompte))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(textRechercherFilm, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(jRFilm)
-                                        .addGap(28, 28, 28)
-                                        .addComponent(jRCinema)
-                                        .addGap(57, 57, 57)))
-                                .addComponent(jBRechercher))
-                            .addComponent(jLabel2)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jLabel1)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 695, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBAccueil)
-                    .addComponent(jBFAffiche)
-                    .addComponent(jBPSortie)
-                    .addComponent(jBMCompte))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textRechercherFilm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBRechercher))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRFilm)
-                    .addComponent(jRCinema))
-                .addGap(18, 18, 18)
+                .addContainerGap()
                 .addComponent(jTabbedPane1))
         );
 
@@ -271,27 +178,9 @@ public class PageFilm extends javax.swing.JPanel {
         jTabbedPane1.getAccessibleContext().setAccessibleDescription("Fiche technique");
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jBMCompteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMCompteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBMCompteActionPerformed
-
-    private void textRechercherFilmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textRechercherFilmActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textRechercherFilmActionPerformed
-
-    private void jRFilmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRFilmActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRFilmActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBAccueil;
-    private javax.swing.JButton jBFAffiche;
-    private javax.swing.JButton jBMCompte;
-    private javax.swing.JButton jBPSortie;
-    private javax.swing.JButton jBRechercher;
     private javax.swing.JEditorPane jEditorPane1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -299,7 +188,6 @@ public class PageFilm extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -308,12 +196,9 @@ public class PageFilm extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRCinema;
-    private javax.swing.JRadioButton jRFilm;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTextField textRechercherFilm;
     // End of variables declaration//GEN-END:variables
 }
