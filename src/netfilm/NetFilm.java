@@ -160,6 +160,12 @@ public class NetFilm extends javax.swing.JFrame  {
         );
 
         jPanel2.setLayout(new java.awt.CardLayout());
+
+        filmsALAffiche1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                filmsALAffiche1KeyPressed(evt);
+            }
+        });
         jPanel2.add(filmsALAffiche1, "card2");
         jPanel2.add(rechercheFilm1, "card3");
         jPanel2.add(rechercheCinéma1, "card4");
@@ -211,6 +217,10 @@ public class NetFilm extends javax.swing.JFrame  {
     private void jBPSortieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPSortieActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jBPSortieActionPerformed
+
+    private void filmsALAffiche1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_filmsALAffiche1KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_filmsALAffiche1KeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
