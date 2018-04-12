@@ -26,6 +26,7 @@ public class NetFilm extends javax.swing.JFrame  {
         jPanel2.add(accueil1);
         jPanel2.repaint();
         jPanel2.revalidate();
+        griserAccueil();
     }
     
     public void initDependencies() {
@@ -55,6 +56,34 @@ public class NetFilm extends javax.swing.JFrame  {
         jPanel3.revalidate();
     }
     
+    public void griserAccueil() {
+        jBAccueil.setEnabled(false);
+        jBFAffiche.setEnabled(true);
+        jBMCompte.setEnabled(true);
+        jBPSortie.setEnabled(true);
+    }
+    
+    public void griserFilmAffiche() {
+        jBAccueil.setEnabled(true);
+        jBFAffiche.setEnabled(false);
+        jBMCompte.setEnabled(true);
+        jBPSortie.setEnabled(true);
+    }
+    
+    public void griserMonCompte() {
+        jBAccueil.setEnabled(true);
+        jBFAffiche.setEnabled(true);
+        jBMCompte.setEnabled(false);
+        jBPSortie.setEnabled(true);
+    }
+    
+    public void griserProchaineSortie() {
+        jBAccueil.setEnabled(true);
+        jBFAffiche.setEnabled(true);
+        jBMCompte.setEnabled(true);
+        jBPSortie.setEnabled(false);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -77,6 +106,7 @@ public class NetFilm extends javax.swing.JFrame  {
         pageFilm2 = new netfilm.PageFilm();
         pageCinéma1 = new netfilm.PageCinéma();
         accueil1 = new netfilm.Accueil();
+        monCompteConnecté1 = new netfilm.MonCompteConnecté();
         jPanel3 = new javax.swing.JPanel();
         jPanelDéconnecté1 = new netfilm.JPanelDéconnecté();
         jPanelConnecté1 = new netfilm.JPanelConnecté();
@@ -154,6 +184,19 @@ public class NetFilm extends javax.swing.JFrame  {
         jPanel2.add(pageCinéma1, "card7");
         jPanel2.add(accueil1, "card8");
 
+        javax.swing.GroupLayout monCompteConnecté1Layout = new javax.swing.GroupLayout(monCompteConnecté1);
+        monCompteConnecté1.setLayout(monCompteConnecté1Layout);
+        monCompteConnecté1Layout.setHorizontalGroup(
+            monCompteConnecté1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 716, Short.MAX_VALUE)
+        );
+        monCompteConnecté1Layout.setVerticalGroup(
+            monCompteConnecté1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 412, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(monCompteConnecté1, "card9");
+
         jPanel3.setLayout(new java.awt.CardLayout());
         jPanel3.add(jPanelDéconnecté1, "card2");
         jPanel3.add(jPanelConnecté1, "card3");
@@ -186,14 +229,33 @@ public class NetFilm extends javax.swing.JFrame  {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBMCompteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMCompteActionPerformed
-        // TODO add your handling code here:
+        /**
+         * Bouton mon compte cliqué.
+         */
+        jPanel2.removeAll();
+        switch (ec) {
+            case CONNECTE:
+                jPanel2.add(monCompteConnecté1);
+                break;
+            case DECONNECT:
+                jPanel2.add(monCompteDéconnecté1);
+                break;
+        }
+        
+        jPanel2.repaint();
+        jPanel2.revalidate();
+        griserAccueil();
     }//GEN-LAST:event_jBMCompteActionPerformed
 
     private void jBAccueilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAccueilActionPerformed
         /**
          * Bouton Film à l'affiche cliqué.
          */
-        
+        jPanel2.removeAll();
+        jPanel2.add(accueil1);
+        jPanel2.repaint();
+        jPanel2.revalidate();
+        griserAccueil();
     }//GEN-LAST:event_jBAccueilActionPerformed
 
     private void jBFAfficheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFAfficheActionPerformed
@@ -204,6 +266,7 @@ public class NetFilm extends javax.swing.JFrame  {
         jPanel2.add(filmsALAffiche1);
         jPanel2.repaint();
         jPanel2.revalidate();
+        griserFilmAffiche();
     }//GEN-LAST:event_jBFAfficheActionPerformed
 
     private void jBPSortieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPSortieActionPerformed
@@ -214,6 +277,7 @@ public class NetFilm extends javax.swing.JFrame  {
         jPanel2.add(prochainesSorties1);
         jPanel2.repaint();
         jPanel2.revalidate();
+        griserProchaineSortie();
     }//GEN-LAST:event_jBPSortieActionPerformed
 
     private void filmsALAffiche1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_filmsALAffiche1KeyPressed
@@ -233,6 +297,7 @@ public class NetFilm extends javax.swing.JFrame  {
     private javax.swing.JPanel jPanel3;
     private netfilm.JPanelConnecté jPanelConnecté1;
     private netfilm.JPanelDéconnecté jPanelDéconnecté1;
+    private netfilm.MonCompteConnecté monCompteConnecté1;
     private netfilm.PageCinéma pageCinéma1;
     private netfilm.PageFilm pageFilm2;
     private netfilm.ProchainesSorties prochainesSorties1;
