@@ -16,9 +16,12 @@ public class MonCompteDéconnecté extends javax.swing.JPanel {
     /**
      * Creates new form MonCompteDéconnecté
      */
-    public MonCompteDéconnecté(NetFilm n) {
-        this.netFilm = n;
+    public MonCompteDéconnecté() {
         initComponents();
+    }
+    
+    public void init(NetFilm n) {
+        this.netFilm = n;
     }
 
     /**
