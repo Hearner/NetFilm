@@ -30,12 +30,6 @@ public class Accueil extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jBRechercher = new javax.swing.JButton();
-        textRechercherFilm = new javax.swing.JTextField();
-        jRFilm = new javax.swing.JRadioButton();
-        jRCinema = new javax.swing.JRadioButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLFilm1 = new javax.swing.JLabel();
@@ -48,39 +42,6 @@ public class Accueil extends javax.swing.JPanel {
         jLFilm5 = new javax.swing.JLabel();
         jLFilm6 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-
-        jLabel1.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel1.setText("NetFilm");
-
-        jLabel2.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel2.setText("Choisissez, Réservez, Profitez");
-
-        jBRechercher.setText("Rechercher");
-        jBRechercher.setToolTipText("");
-        jBRechercher.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBRechercherActionPerformed(evt);
-            }
-        });
-
-        textRechercherFilm.setToolTipText("Rechercher un film, un cinéma...");
-        textRechercherFilm.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textRechercherFilmActionPerformed(evt);
-            }
-        });
-
-        jRFilm.setSelected(true);
-        jRFilm.setText("Film");
-        jRFilm.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRFilmActionPerformed(evt);
-            }
-        });
-
-        jRCinema.setText("Cinéma");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setPreferredSize(new java.awt.Dimension(318, 250));
@@ -201,68 +162,23 @@ public class Accueil extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jRFilm)
-                .addGap(35, 35, 35)
-                .addComponent(jRCinema)
-                .addGap(303, 303, 303))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(139, 139, 139)
-                    .addComponent(textRechercherFilm, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(jBRechercher)
-                    .addContainerGap(196, Short.MAX_VALUE))
-                .addGroup(layout.createSequentialGroup()
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(25, 25, 25)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(30, 30, 30)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(272, 272, 272)
-                            .addComponent(jLabel1))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(235, 235, 235)
-                            .addComponent(jLabel2)))
-                    .addContainerGap(25, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(jLabel1)
-                .addGap(1, 1, 1)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textRechercherFilm, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBRechercher))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRCinema)
-                    .addComponent(jRFilm))
-                .addGap(42, 42, 42)
+                .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void textRechercherFilmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textRechercherFilmActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textRechercherFilmActionPerformed
-
-    private void jRFilmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRFilmActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRFilmActionPerformed
-
-    private void jBRechercherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRechercherActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBRechercherActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -273,7 +189,6 @@ public class Accueil extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBRechercher;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLFilm1;
@@ -282,14 +197,9 @@ public class Accueil extends javax.swing.JPanel {
     private javax.swing.JLabel jLFilm4;
     private javax.swing.JLabel jLFilm5;
     private javax.swing.JLabel jLFilm6;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRCinema;
-    private javax.swing.JRadioButton jRFilm;
-    private javax.swing.JTextField textRechercherFilm;
     // End of variables declaration//GEN-END:variables
 }
