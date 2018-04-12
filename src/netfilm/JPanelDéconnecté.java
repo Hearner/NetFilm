@@ -40,6 +40,8 @@ public class JPanelDéconnecté extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jPasswordField1 = new javax.swing.JPasswordField();
 
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         jLabel1.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Connexion");

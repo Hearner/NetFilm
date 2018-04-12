@@ -175,7 +175,9 @@ public class NetFilm extends javax.swing.JFrame  {
         panelHeader1 = new netfilm.PanelHeader();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(713, 662));
+        setTitle("NetFilm");
+        setMinimumSize(new java.awt.Dimension(740, 643));
+        setResizable(false);
 
         jBAccueil.setText("Accueil");
         jBAccueil.addActionListener(new java.awt.event.ActionListener() {
@@ -210,7 +212,7 @@ public class NetFilm extends javax.swing.JFrame  {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(128, 128, 128)
                 .addComponent(jBAccueil)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jBFAffiche)

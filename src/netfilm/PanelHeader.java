@@ -40,6 +40,7 @@ public class PanelHeader extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
+        textRechercherFilm.setEditable(false);
         textRechercherFilm.setToolTipText("Rechercher un film, un cinéma...");
         textRechercherFilm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,27 +71,20 @@ public class PanelHeader extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Bebas Neue", 0, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Choisissez, Réservez, Profitez");
 
-        jLabel1.setFont(new java.awt.Font("Bebas Neue", 0, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("NetFilm");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabel1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(137, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -103,6 +97,8 @@ public class PanelHeader extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jBRechercher)
                 .addContainerGap(43, Short.MAX_VALUE))
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,7 +114,7 @@ public class PanelHeader extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRFilm)
                     .addComponent(jRCinema))
-                .addGap(0, 32, Short.MAX_VALUE))
+                .addGap(0, 13, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
