@@ -99,6 +99,7 @@ public class NetFilm extends javax.swing.JFrame  {
         jBPSortie = new javax.swing.JButton();
         jBMCompte = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        monCompteDéconnecté1 = new netfilm.MonCompteDéconnecté();
         filmsALAffiche1 = new netfilm.FilmsALAffiche();
         rechercheFilm1 = new netfilm.RechercheFilm();
         rechercheCinéma1 = new netfilm.RechercheCinéma();
@@ -171,6 +172,19 @@ public class NetFilm extends javax.swing.JFrame  {
 
         jPanel2.setLayout(new java.awt.CardLayout());
 
+        javax.swing.GroupLayout monCompteDéconnecté1Layout = new javax.swing.GroupLayout(monCompteDéconnecté1);
+        monCompteDéconnecté1.setLayout(monCompteDéconnecté1Layout);
+        monCompteDéconnecté1Layout.setHorizontalGroup(
+            monCompteDéconnecté1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 716, Short.MAX_VALUE)
+        );
+        monCompteDéconnecté1Layout.setVerticalGroup(
+            monCompteDéconnecté1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 412, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(monCompteDéconnecté1, "card10");
+
         filmsALAffiche1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 filmsALAffiche1KeyPressed(evt);
@@ -241,10 +255,9 @@ public class NetFilm extends javax.swing.JFrame  {
                 jPanel2.add(monCompteDéconnecté1);
                 break;
         }
-        
         jPanel2.repaint();
         jPanel2.revalidate();
-        griserAccueil();
+        griserMonCompte();
     }//GEN-LAST:event_jBMCompteActionPerformed
 
     private void jBAccueilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAccueilActionPerformed
@@ -298,6 +311,7 @@ public class NetFilm extends javax.swing.JFrame  {
     private netfilm.JPanelConnecté jPanelConnecté1;
     private netfilm.JPanelDéconnecté jPanelDéconnecté1;
     private netfilm.MonCompteConnecté monCompteConnecté1;
+    private netfilm.MonCompteDéconnecté monCompteDéconnecté1;
     private netfilm.PageCinéma pageCinéma1;
     private netfilm.PageFilm pageFilm2;
     private netfilm.ProchainesSorties prochainesSorties1;
