@@ -22,6 +22,10 @@ public class NetFilm extends javax.swing.JFrame  {
         
         et = EtatType.FILM;
         disconnect();
+        jPanel2.removeAll();
+        jPanel2.add(accueil1);
+        jPanel2.repaint();
+        jPanel2.revalidate();
     }
     
     public void initDependencies() {
@@ -72,6 +76,7 @@ public class NetFilm extends javax.swing.JFrame  {
         prochainesSorties1 = new netfilm.ProchainesSorties();
         pageFilm2 = new netfilm.PageFilm();
         pageCinéma1 = new netfilm.PageCinéma();
+        accueil1 = new netfilm.Accueil();
         jPanel3 = new javax.swing.JPanel();
         jPanelDéconnecté1 = new netfilm.JPanelDéconnecté();
         jPanelConnecté1 = new netfilm.JPanelConnecté();
@@ -147,6 +152,7 @@ public class NetFilm extends javax.swing.JFrame  {
         jPanel2.add(prochainesSorties1, "card5");
         jPanel2.add(pageFilm2, "card6");
         jPanel2.add(pageCinéma1, "card7");
+        jPanel2.add(accueil1, "card8");
 
         jPanel3.setLayout(new java.awt.CardLayout());
         jPanel3.add(jPanelDéconnecté1, "card2");
@@ -161,7 +167,7 @@ public class NetFilm extends javax.swing.JFrame  {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -216,6 +222,7 @@ public class NetFilm extends javax.swing.JFrame  {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private netfilm.Accueil accueil1;
     private netfilm.FilmsALAffiche filmsALAffiche1;
     private javax.swing.JButton jBAccueil;
     private javax.swing.JButton jBFAffiche;
