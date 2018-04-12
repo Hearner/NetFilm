@@ -16,9 +16,12 @@ public class PageFilm extends javax.swing.JPanel {
     /**
      * Creates new form PageCinéma
      */
-    public PageFilm(NetFilm n) {
-        this.netFilm = n;
+    public PageFilm() {
         initComponents();
+    }
+    
+    public void init(NetFilm n) {
+        this.netFilm = n;
     }
 
     /**

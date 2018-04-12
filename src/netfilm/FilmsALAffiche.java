@@ -16,9 +16,12 @@ public class FilmsALAffiche extends javax.swing.JPanel {
     /**
      * Creates new form FilmsALAffiche
      */
-    public FilmsALAffiche(NetFilm n) {
-        this.netFilm = n;
+    public FilmsALAffiche() {
         initComponents();
+    }
+    
+    public void init(NetFilm n) {
+        this.netFilm = n;
     }
 
     /**

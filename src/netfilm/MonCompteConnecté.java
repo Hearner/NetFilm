@@ -16,9 +16,12 @@ public class MonCompteConnecté extends javax.swing.JPanel {
     /**
      * Creates new form MonCompteConnecté
      */
-    public MonCompteConnecté(NetFilm n) {
-        this.netFilm = n;
+    public MonCompteConnecté() {
         initComponents();
+    }
+    
+    public void init(NetFilm n) {
+        this.netFilm = n;
     }
 
     /**

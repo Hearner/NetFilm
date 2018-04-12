@@ -16,9 +16,12 @@ public class JPanelConnecté extends javax.swing.JPanel {
     /**
      * Creates new form JPanelConnecté
      */
-    public JPanelConnecté(NetFilm n) {
-        this.netFilm = n;
+    public JPanelConnecté() {
         initComponents();
+    }
+    
+    public void init(NetFilm n) {
+        this.netFilm = n;
     }
 
     /**

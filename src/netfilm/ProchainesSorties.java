@@ -16,9 +16,12 @@ public class ProchainesSorties extends javax.swing.JPanel {
     /**
      * Creates new form ProchainesSorties
      */
-    public ProchainesSorties(NetFilm n) {
-        this.netFilm = n;
+    public ProchainesSorties() {
         initComponents();
+    }
+    
+    public void init(NetFilm n) {
+        this.netFilm = n;
     }
 
     /**

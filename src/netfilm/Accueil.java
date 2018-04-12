@@ -13,9 +13,12 @@ public class Accueil extends javax.swing.JPanel {
 
     private NetFilm netFilm;
     
-    public Accueil(NetFilm n) {
-        this.netFilm = n;
+    public Accueil() {
         initComponents();
+    }
+    
+    public void init(NetFilm n) {
+        this.netFilm = n;
     }
 
     /**

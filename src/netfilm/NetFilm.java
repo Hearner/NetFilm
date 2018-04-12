@@ -5,23 +5,34 @@
  */
 package netfilm;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Champeau
  */
-public class NetFilm extends javax.swing.JFrame {
+public class NetFilm extends javax.swing.JFrame  {
 
     /**
      * Creates new form NetFilm
      */
     public NetFilm() {
         initComponents();
+        initDependencies();
+        
         et = EtatType.FILM;
-        ec = EtatConnexion.DECONNECT;
-        jPanel3.removeAll();
-        jPanel3.add(jPanelDéconnecté1);
-        jPanel3.repaint();
-        jPanel3.revalidate();
+        disconnect();
+    }
+    
+    public void initDependencies() {
+        jPanelConnecté1.init(this);
+        jPanelDéconnecté1.init(this);
+        pageCinéma1.init(this);
+        pageFilm2.init(this);
+        prochainesSorties1.init(this);
+        rechercheCinéma1.init(this);
+        rechercheFilm1.init(this);
+        filmsALAffiche1.init(this);
     }
 
     public void connect() {
@@ -55,15 +66,15 @@ public class NetFilm extends javax.swing.JFrame {
         jBPSortie = new javax.swing.JButton();
         jBMCompte = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        filmsALAffiche1 = new netfilm.FilmsALAffiche(this);
-        rechercheFilm1 = new netfilm.RechercheFilm(this);
-        rechercheCinéma1 = new netfilm.RechercheCinéma(this);
-        prochainesSorties1 = new netfilm.ProchainesSorties(this);
-        pageFilm2 = new netfilm.PageFilm(this);
-        pageCinéma1 = new netfilm.PageCinéma(this);
+        filmsALAffiche1 = new netfilm.FilmsALAffiche();
+        rechercheFilm1 = new netfilm.RechercheFilm();
+        rechercheCinéma1 = new netfilm.RechercheCinéma();
+        prochainesSorties1 = new netfilm.ProchainesSorties();
+        pageFilm2 = new netfilm.PageFilm();
+        pageCinéma1 = new netfilm.PageCinéma();
         jPanel3 = new javax.swing.JPanel();
-        jPanelDéconnecté1 = new netfilm.JPanelDéconnecté(this);
-        jPanelConnecté1 = new netfilm.JPanelConnecté(this);
+        jPanelDéconnecté1 = new netfilm.JPanelDéconnecté();
+        jPanelConnecté1 = new netfilm.JPanelConnecté();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(713, 662));

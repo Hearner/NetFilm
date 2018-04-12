@@ -16,9 +16,12 @@ public class RechercheCinéma extends javax.swing.JPanel {
     /**
      * Creates new form RechercheCinéma
      */
-    public RechercheCinéma(NetFilm n) {
-        this.netFilm = n;
+    public RechercheCinéma() {
         initComponents();
+    }
+    
+    public void init(NetFilm n) {
+        this.netFilm = n;
     }
 
     /**
