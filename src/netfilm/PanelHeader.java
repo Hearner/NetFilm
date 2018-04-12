@@ -56,6 +56,11 @@ public class PanelHeader extends javax.swing.JPanel {
         });
 
         jRCinema.setText("Cinéma");
+        jRCinema.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRCinemaActionPerformed(evt);
+            }
+        });
 
         jRFilm.setSelected(true);
         jRFilm.setText("Film");
@@ -122,12 +127,27 @@ public class PanelHeader extends javax.swing.JPanel {
     }//GEN-LAST:event_textRechercherFilmActionPerformed
 
     private void jBRechercherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRechercherActionPerformed
-        // TODO add your handling code here:
+        switch (netFilm.getEtatType()) {
+            case CINEMA:
+                netFilm.afficherRechercheCinema();
+                break;
+            case FILM:
+                netFilm.afficherRechercheFilm();
+                break;
+        }
     }//GEN-LAST:event_jBRechercherActionPerformed
 
     private void jRFilmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRFilmActionPerformed
-        // TODO add your handling code here:
+        netFilm.setEtatTypeFilm();
+        jRCinema.setSelected(false);
+        jRFilm.setSelected(true);
     }//GEN-LAST:event_jRFilmActionPerformed
+
+    private void jRCinemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRCinemaActionPerformed
+        netFilm.setEtatTypeCinema();
+        jRCinema.setSelected(true);
+        jRFilm.setSelected(false);
+    }//GEN-LAST:event_jRCinemaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
