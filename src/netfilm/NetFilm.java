@@ -5,8 +5,6 @@
  */
 package netfilm;
 
-import javax.swing.JFrame;
-
 /**
  *
  * @author Champeau
@@ -22,11 +20,8 @@ public class NetFilm extends javax.swing.JFrame  {
         
         et = EtatType.FILM;
         disconnect();
-        jPanel2.removeAll();
-        jPanel2.add(accueil1);
-        jPanel2.repaint();
-        jPanel2.revalidate();
-        griserAccueil();
+        
+        afficherAccueil();
     }
     
     public void initDependencies() {
@@ -38,6 +33,8 @@ public class NetFilm extends javax.swing.JFrame  {
         rechercheCinéma1.init(this);
         rechercheFilm1.init(this);
         filmsALAffiche1.init(this);
+        monCompteConnecté1.init(this);
+        monCompteDéconnecté1.init(this);
     }
 
     public void connect() {
@@ -56,28 +53,55 @@ public class NetFilm extends javax.swing.JFrame  {
         jPanel3.revalidate();
     }
     
-    public void griserAccueil() {
+    public void afficherAccueil() {
+        jPanel2.removeAll();
+        jPanel2.add(accueil1);
+        jPanel2.repaint();
+        jPanel2.revalidate();
+        
         jBAccueil.setEnabled(false);
         jBFAffiche.setEnabled(true);
         jBMCompte.setEnabled(true);
         jBPSortie.setEnabled(true);
     }
     
-    public void griserFilmAffiche() {
+    public void afficherFilmAffiche() {
+        jPanel2.removeAll();
+        jPanel2.add(filmsALAffiche1);
+        jPanel2.repaint();
+        jPanel2.revalidate();
+        
         jBAccueil.setEnabled(true);
         jBFAffiche.setEnabled(false);
         jBMCompte.setEnabled(true);
         jBPSortie.setEnabled(true);
     }
     
-    public void griserMonCompte() {
+    public void afficherMonCompte() {
+        jPanel2.removeAll();
+        switch (ec) {
+            case CONNECTE:
+                jPanel2.add(monCompteConnecté1);
+                break;
+            case DECONNECT:
+                jPanel2.add(monCompteDéconnecté1);
+                break;
+        }
+        jPanel2.repaint();
+        jPanel2.revalidate();
+        
         jBAccueil.setEnabled(true);
         jBFAffiche.setEnabled(true);
         jBMCompte.setEnabled(false);
         jBPSortie.setEnabled(true);
     }
     
-    public void griserProchaineSortie() {
+    public void afficherProchaineSortie() {
+        jPanel2.removeAll();
+        jPanel2.add(prochainesSorties1);
+        jPanel2.repaint();
+        jPanel2.revalidate();
+        
         jBAccueil.setEnabled(true);
         jBFAffiche.setEnabled(true);
         jBMCompte.setEnabled(true);
@@ -246,51 +270,28 @@ public class NetFilm extends javax.swing.JFrame  {
         /**
          * Bouton mon compte cliqué.
          */
-        jPanel2.removeAll();
-        switch (ec) {
-            case CONNECTE:
-                jPanel2.add(monCompteConnecté1);
-                break;
-            case DECONNECT:
-                jPanel2.add(monCompteDéconnecté1);
-                break;
-        }
-        jPanel2.repaint();
-        jPanel2.revalidate();
-        griserMonCompte();
+        afficherMonCompte();
     }//GEN-LAST:event_jBMCompteActionPerformed
 
     private void jBAccueilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAccueilActionPerformed
         /**
          * Bouton Film à l'affiche cliqué.
          */
-        jPanel2.removeAll();
-        jPanel2.add(accueil1);
-        jPanel2.repaint();
-        jPanel2.revalidate();
-        griserAccueil();
+        afficherAccueil();
     }//GEN-LAST:event_jBAccueilActionPerformed
 
     private void jBFAfficheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFAfficheActionPerformed
         /**
          * Bouton Film à l'affiche cliqué.
          */
-        jPanel2.removeAll();
-        jPanel2.add(filmsALAffiche1);
-        jPanel2.repaint();
-        jPanel2.revalidate();
-        griserFilmAffiche();
+        afficherFilmAffiche();
     }//GEN-LAST:event_jBFAfficheActionPerformed
 
     private void jBPSortieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPSortieActionPerformed
         /**
          * Bouton des prochaines sorties cliqué.
          */
-        jPanel2.removeAll();
-        jPanel2.add(prochainesSorties1);
-        jPanel2.repaint();
-        jPanel2.revalidate();
-        griserProchaineSortie();
+        afficherProchaineSortie();
     }//GEN-LAST:event_jBPSortieActionPerformed
 
     private void filmsALAffiche1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_filmsALAffiche1KeyPressed

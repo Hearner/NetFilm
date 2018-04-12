@@ -16,9 +16,12 @@ public class PanelHeader extends javax.swing.JPanel {
     /**
      * Creates new form PanelHeader
      */
-    public PanelHeader(NetFilm n) {
-        this.netFilm = n;
+    public PanelHeader() {
         initComponents();
+    }
+    
+    public void init(NetFilm n) {
+        this.netFilm = n;
     }
 
     /**
