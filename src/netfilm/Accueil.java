@@ -5,18 +5,17 @@
  */
 package netfilm;
 
-import javax.swing.JFrame;
-
 /**
  *
  * @author Champeau
  */
 public class Accueil extends javax.swing.JPanel {
 
-    public Accueil() {
+    private NetFilm netFilm;
+    
+    public Accueil(NetFilm n) {
+        this.netFilm = n;
         initComponents();
-       eConnexion = EtatConnexion.DECONNECT;
-       eType = EtatType.FILM;
     }
 
     /**
@@ -270,9 +269,6 @@ public class Accueil extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private static EtatType eType;
-    private static EtatConnexion eConnexion;
-    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBRechercher;
     private javax.swing.JButton jButton1;

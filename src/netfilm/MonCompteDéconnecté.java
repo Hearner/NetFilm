@@ -11,10 +11,13 @@ package netfilm;
  */
 public class MonCompteDéconnecté extends javax.swing.JPanel {
 
+    private NetFilm netFilm;
+    
     /**
      * Creates new form MonCompteDéconnecté
      */
-    public MonCompteDéconnecté() {
+    public MonCompteDéconnecté(NetFilm n) {
+        this.netFilm = n;
         initComponents();
     }
 

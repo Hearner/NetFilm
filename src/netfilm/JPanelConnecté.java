@@ -11,10 +11,13 @@ package netfilm;
  */
 public class JPanelConnecté extends javax.swing.JPanel {
 
+    private NetFilm netFilm;
+    
     /**
      * Creates new form JPanelConnecté
      */
-    public JPanelConnecté() {
+    public JPanelConnecté(NetFilm n) {
+        this.netFilm = n;
         initComponents();
     }
 
@@ -49,7 +52,7 @@ public class JPanelConnecté extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        netFilm.disconnect();
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

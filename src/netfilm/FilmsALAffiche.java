@@ -11,10 +11,13 @@ package netfilm;
  */
 public class FilmsALAffiche extends javax.swing.JPanel {
 
+    private NetFilm netFilm;
+    
     /**
      * Creates new form FilmsALAffiche
      */
-    public FilmsALAffiche() {
+    public FilmsALAffiche(NetFilm n) {
+        this.netFilm = n;
         initComponents();
     }
 

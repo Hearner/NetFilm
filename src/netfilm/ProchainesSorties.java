@@ -11,10 +11,13 @@ package netfilm;
  */
 public class ProchainesSorties extends javax.swing.JPanel {
 
+    private NetFilm netFilm;
+    
     /**
      * Creates new form ProchainesSorties
      */
-    public ProchainesSorties() {
+    public ProchainesSorties(NetFilm n) {
+        this.netFilm = n;
         initComponents();
     }
 

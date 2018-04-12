@@ -11,10 +11,13 @@ package netfilm;
  */
 public class PageCinéma extends javax.swing.JPanel {
 
+    private NetFilm netFilm;
+    
     /**
      * Creates new form PageFilm
      */
-    public PageCinéma() {
+    public PageCinéma(NetFilm n) {
+        this.netFilm = n;
         initComponents();
     }
 

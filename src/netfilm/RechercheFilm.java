@@ -11,10 +11,13 @@ package netfilm;
  */
 public class RechercheFilm extends javax.swing.JPanel {
 
+    private NetFilm netFilm;
+    
     /**
      * Creates new form RechercheFilm
      */
-    public RechercheFilm() {
+    public RechercheFilm(NetFilm n) {
+        this.netFilm = n;
         initComponents();
     }
 

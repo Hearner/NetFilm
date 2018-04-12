@@ -11,10 +11,13 @@ package netfilm;
  */
 public class PanelHeader extends javax.swing.JPanel {
 
+    private NetFilm netFilm;
+    
     /**
      * Creates new form PanelHeader
      */
-    public PanelHeader() {
+    public PanelHeader(NetFilm n) {
+        this.netFilm = n;
         initComponents();
     }
 
