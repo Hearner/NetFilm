@@ -79,18 +79,42 @@ public class RechercheCinéma extends javax.swing.JPanel {
         jPanel5.setMaximumSize(new java.awt.Dimension(100, 100));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/amega-CGR-blagnac-277x300.jpg"))); // NOI18N
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel15MousePressed(evt);
+            }
+        });
 
         jLabel15.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
         jLabel15.setText("CGR TOULOUSE BLAGNAC");
+        jLabel15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel15MousePressed(evt);
+            }
+        });
 
         jTextPane6.setEditable(false);
         jTextPane6.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nSuspendisse fermentum odio turpis, a aliquam ipsum\naliquam vitae. Suspendisse elementum accumsan tortor,\nsodales malesuada est efficitur vitae.");
         jScrollPane6.setViewportView(jTextPane6);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/cine_gaumontlabege.jpg"))); // NOI18N
+        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel15MousePressed(evt);
+            }
+        });
 
         jLabel16.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
         jLabel16.setText("GAUMONT TOULOUSE LABEGE IMAX");
+        jLabel16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel15MousePressed(evt);
+            }
+        });
 
         jTextPane7.setEditable(false);
         jTextPane7.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nSuspendisse fermentum odio turpis, a aliquam ipsum\naliquam vitae. Suspendisse elementum accumsan tortor,\nsodales malesuada est efficitur vitae.");
@@ -98,12 +122,24 @@ public class RechercheCinéma extends javax.swing.JPanel {
 
         jLabel17.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
         jLabel17.setText("GAUMONT TOULOUSE WILSON");
+        jLabel17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel15MousePressed(evt);
+            }
+        });
 
         jTextPane8.setEditable(false);
         jTextPane8.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nSuspendisse fermentum odio turpis, a aliquam ipsum\naliquam vitae. Suspendisse elementum accumsan tortor,\nsodales malesuada est efficitur vitae.");
         jScrollPane8.setViewportView(jTextPane8);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/cine_gaumontwilson.jpg"))); // NOI18N
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel15MousePressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -380,6 +416,10 @@ public class RechercheCinéma extends javax.swing.JPanel {
     private void jCheckBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox8ActionPerformed
+
+    private void jLabel15MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MousePressed
+        netFilm.afficherPageCinema();
+    }//GEN-LAST:event_jLabel15MousePressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

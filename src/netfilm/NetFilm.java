@@ -38,6 +38,7 @@ public class NetFilm extends javax.swing.JFrame  {
     }
     
     public void initDependencies() {
+        accueil1.init(this);
         jPanelConnecté1.init(this);
         jPanelDéconnecté1.init(this);
         pageCinéma1.init(this);
@@ -157,6 +158,20 @@ public class NetFilm extends javax.swing.JFrame  {
                 
         jPanel2.removeAll();
         jPanel2.add(rechercheFilm1);
+        jPanel2.repaint();
+        jPanel2.revalidate();
+        
+        jBAccueil.setEnabled(true);
+        jBFAffiche.setEnabled(true);
+        jBMCompte.setEnabled(true);
+        jBPSortie.setEnabled(true);
+    }
+    
+    public void afficherPageCinema() {
+        ePage = EtatPage.CINEMA;
+                
+        jPanel2.removeAll();
+        jPanel2.add(pageCinéma1);
         jPanel2.repaint();
         jPanel2.revalidate();
         

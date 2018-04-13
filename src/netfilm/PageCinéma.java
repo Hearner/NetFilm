@@ -169,19 +169,19 @@ public class PageCinéma extends javax.swing.JPanel {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"VF", "10:05", "12:45", "16:10", "20:50"},
-                {"VOSTFR", "11:30", null, null, null},
-                {"VO", "14:00", "18:30", null, null}
+                {"VF", "10:05", "12:45", "16:10"},
+                {"VOSTFR", "11:30", null, null},
+                {"VO", "14:00", "18:30", null}
             },
             new String [] {
-                "", "", "", "", ""
+                "", "", "", ""
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -200,7 +200,6 @@ public class PageCinéma extends javax.swing.JPanel {
             jTable1.getColumnModel().getColumn(1).setResizable(false);
             jTable1.getColumnModel().getColumn(2).setResizable(false);
             jTable1.getColumnModel().getColumn(3).setResizable(false);
-            jTable1.getColumnModel().getColumn(4).setResizable(false);
         }
 
         jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/cine_gaumontlabege.jpg"))); // NOI18N
@@ -242,19 +241,19 @@ public class PageCinéma extends javax.swing.JPanel {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"VF", "10:05", "12:45", "16:10", "20:50"},
-                {"VOSTFR", "11:30", null, null, null},
-                {"VO", "14:00", "18:30", null, null}
+                {"VF", "10:05", "12:45", "16:10"},
+                {"VOSTFR", "11:30", null, null},
+                {"VO", "14:00", "18:30", null}
             },
             new String [] {
-                "", "", "", "", ""
+                "", "", "", ""
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -273,7 +272,6 @@ public class PageCinéma extends javax.swing.JPanel {
             jTable2.getColumnModel().getColumn(1).setResizable(false);
             jTable2.getColumnModel().getColumn(2).setResizable(false);
             jTable2.getColumnModel().getColumn(3).setResizable(false);
-            jTable2.getColumnModel().getColumn(4).setResizable(false);
         }
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
