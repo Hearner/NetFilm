@@ -86,7 +86,7 @@ public class RechercheCinéma extends javax.swing.JPanel {
             }
         });
 
-        jLabel15.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel15.setText("CGR TOULOUSE BLAGNAC");
         jLabel15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -107,7 +107,7 @@ public class RechercheCinéma extends javax.swing.JPanel {
             }
         });
 
-        jLabel16.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel16.setText("GAUMONT TOULOUSE LABEGE IMAX");
         jLabel16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -120,7 +120,7 @@ public class RechercheCinéma extends javax.swing.JPanel {
         jTextPane7.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nSuspendisse fermentum odio turpis, a aliquam ipsum\naliquam vitae. Suspendisse elementum accumsan tortor,\nsodales malesuada est efficitur vitae.");
         jScrollPane7.setViewportView(jTextPane7);
 
-        jLabel17.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel17.setText("GAUMONT TOULOUSE WILSON");
         jLabel17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {

@@ -110,7 +110,7 @@ public class RechercheFilm extends javax.swing.JPanel {
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_blackpanther.jpg"))); // NOI18N
 
-        jLabel15.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel15.setText("BLACK PANTHER");
 
         jTextPane6.setEditable(false);
@@ -119,7 +119,7 @@ public class RechercheFilm extends javax.swing.JPanel {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_readyplayerone.jpg"))); // NOI18N
 
-        jLabel7.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel7.setText("READY PLAYER ONE");
 
         jTextPane5.setEditable(false);

@@ -65,7 +65,7 @@ public class FilmsALAffiche extends javax.swing.JPanel {
 
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel6.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel6.setText("CROC-BLANC");
 
         jButton1.setText("Réserver une séance");
@@ -83,7 +83,7 @@ public class FilmsALAffiche extends javax.swing.JPanel {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_readyplayerone.jpg"))); // NOI18N
 
-        jLabel7.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel7.setText("READY PLAYER ONE");
 
         jTextPane5.setEditable(false);
@@ -99,7 +99,7 @@ public class FilmsALAffiche extends javax.swing.JPanel {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_blackpanther.jpg"))); // NOI18N
 
-        jLabel8.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel8.setText("BLACK PANTHER");
 
         jTextPane6.setEditable(false);
@@ -115,7 +115,7 @@ public class FilmsALAffiche extends javax.swing.JPanel {
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_tombraider.jpg"))); // NOI18N
 
-        jLabel10.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel10.setText("TOMB RAIDER");
 
         jTextPane7.setEditable(false);
