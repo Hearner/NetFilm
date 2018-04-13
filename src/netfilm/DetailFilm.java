@@ -5,6 +5,8 @@
  */
 package netfilm;
 
+import javax.swing.JTabbedPane;
+
 /**
  *
  * @author Champeau
@@ -27,7 +29,7 @@ public class DetailFilm extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jTabbedPane = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -41,7 +43,7 @@ public class DetailFilm extends javax.swing.JPanel {
         jTextArea1 = new javax.swing.JTextArea();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jbVoirLesAvis = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -91,10 +93,10 @@ public class DetailFilm extends javax.swing.JPanel {
 
         jLabel10.setText("4.5/5");
 
-        jButton1.setText("Voir les avis");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jbVoirLesAvis.setText("Voir les avis");
+        jbVoirLesAvis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jbVoirLesAvisActionPerformed(evt);
             }
         });
 
@@ -118,7 +120,7 @@ public class DetailFilm extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1)
+                        .addComponent(jbVoirLesAvis)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
@@ -147,7 +149,7 @@ public class DetailFilm extends javax.swing.JPanel {
                     .addComponent(jLabel2)
                     .addComponent(jLabel9)
                     .addComponent(jLabel10)
-                    .addComponent(jButton1))
+                    .addComponent(jbVoirLesAvis))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
@@ -157,7 +159,7 @@ public class DetailFilm extends javax.swing.JPanel {
                         .addComponent(jLabel7)
                         .addComponent(jLabel8)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -167,7 +169,7 @@ public class DetailFilm extends javax.swing.JPanel {
                 .addContainerGap(174, Short.MAX_VALUE))
         );
 
-        jTabbedPane2.addTab("Fiche technique", jPanel2);
+        jTabbedPane.addTab("Fiche technique", jPanel2);
 
         jPanel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
@@ -302,7 +304,7 @@ public class DetailFilm extends javax.swing.JPanel {
                 .addContainerGap(43, Short.MAX_VALUE))
         );
 
-        jTabbedPane2.addTab("Séances", jPanel3);
+        jTabbedPane.addTab("Séances", jPanel3);
 
         jLabel17.setText("IMAGE");
 
@@ -349,7 +351,7 @@ public class DetailFilm extends javax.swing.JPanel {
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
         );
 
-        jTabbedPane2.addTab("Avis", jPanel6);
+        jTabbedPane.addTab("Avis", jPanel6);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -357,27 +359,29 @@ public class DetailFilm extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 667, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 667, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane2)
+                .addComponent(jTabbedPane)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
+    private void jbVoirLesAvisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVoirLesAvisActionPerformed
+        afficherTab(1);
+    }//GEN-LAST:event_jbVoirLesAvisActionPerformed
+    
+    public void afficherTab(int i) {
+        jTabbedPane.setSelectedIndex(i);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private netfilm.AvisConnecte avisConnecte1;
     private netfilm.AvisDeconnecte avisDeconnecte1;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -407,11 +411,12 @@ public class DetailFilm extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTabbedPane jTabbedPane;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JButton jbVoirLesAvis;
     // End of variables declaration//GEN-END:variables
 }

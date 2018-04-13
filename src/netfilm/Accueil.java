@@ -35,13 +35,13 @@ public class Accueil extends javax.swing.JPanel {
         jLFilm1 = new javax.swing.JLabel();
         jLFilm2 = new javax.swing.JLabel();
         jLFilm3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jBFilmAffiche = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLFilm4 = new javax.swing.JLabel();
         jLFilm5 = new javax.swing.JLabel();
         jLFilm6 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        jBProchainesSorties = new javax.swing.JButton();
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setPreferredSize(new java.awt.Dimension(318, 250));
@@ -56,12 +56,12 @@ public class Accueil extends javax.swing.JPanel {
         jLFilm3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_tombraider.jpg"))); // NOI18N
         jLFilm3.setToolTipText("");
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton1.setText("Voir plus...");
-        jButton1.setPreferredSize(new java.awt.Dimension(95, 30));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jBFilmAffiche.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jBFilmAffiche.setText("Voir plus...");
+        jBFilmAffiche.setPreferredSize(new java.awt.Dimension(95, 30));
+        jBFilmAffiche.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jBFilmAfficheActionPerformed(evt);
             }
         });
 
@@ -72,7 +72,7 @@ public class Accueil extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLFilm1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                 .addComponent(jLFilm2)
                 .addGap(7, 7, 7)
                 .addComponent(jLFilm3)
@@ -81,7 +81,7 @@ public class Accueil extends javax.swing.JPanel {
                 .addGap(105, 105, 105)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBFilmAffiche, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -96,8 +96,8 @@ public class Accueil extends javax.swing.JPanel {
                         .addComponent(jLFilm1)
                         .addComponent(jLFilm3)))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addComponent(jBFilmAffiche, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -112,12 +112,12 @@ public class Accueil extends javax.swing.JPanel {
 
         jLFilm6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_avengers.jpg"))); // NOI18N
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton2.setText("Voir plus...");
-        jButton2.setPreferredSize(new java.awt.Dimension(95, 30));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jBProchainesSorties.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jBProchainesSorties.setText("Voir plus...");
+        jBProchainesSorties.setPreferredSize(new java.awt.Dimension(95, 30));
+        jBProchainesSorties.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jBProchainesSortiesActionPerformed(evt);
             }
         });
 
@@ -126,7 +126,7 @@ public class Accueil extends javax.swing.JPanel {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
+                .addContainerGap(23, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jLFilm4)
@@ -140,7 +140,7 @@ public class Accueil extends javax.swing.JPanel {
                         .addGap(92, 92, 92))))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(105, 105, 105)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jBProchainesSorties, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -154,8 +154,8 @@ public class Accueil extends javax.swing.JPanel {
                     .addComponent(jLFilm5)
                     .addComponent(jLFilm6))
                 .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addComponent(jBProchainesSorties, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -180,17 +180,17 @@ public class Accueil extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jBFilmAfficheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFilmAfficheActionPerformed
+        netFilm.afficherFilmAffiche();
+    }//GEN-LAST:event_jBFilmAfficheActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void jBProchainesSortiesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBProchainesSortiesActionPerformed
+        netFilm.afficherProchaineSortie();
+    }//GEN-LAST:event_jBProchainesSortiesActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jBFilmAffiche;
+    private javax.swing.JButton jBProchainesSorties;
     private javax.swing.JLabel jLFilm1;
     private javax.swing.JLabel jLFilm2;
     private javax.swing.JLabel jLFilm3;

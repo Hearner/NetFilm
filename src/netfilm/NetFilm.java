@@ -11,7 +11,6 @@ package netfilm;
  */
 public class NetFilm extends javax.swing.JFrame  {
 
-    public enum EtatPage { ACCUEIL, FILMS_AFFICHE, PROCHAINES_SORTIES, FILM, CINEMA, COMPTE, RECH_FILM, RECH_CINEMA }
     /**
      * Creates new form NetFilm
      */
@@ -174,6 +173,20 @@ public class NetFilm extends javax.swing.JFrame  {
         jPanel2.add(pageCinéma1);
         jPanel2.repaint();
         jPanel2.revalidate();
+        
+        jBAccueil.setEnabled(true);
+        jBFAffiche.setEnabled(true);
+        jBMCompte.setEnabled(true);
+        jBPSortie.setEnabled(true);
+    }
+    
+
+    public void reserverSeanceProchaineSortie(int i) {
+        jPanel2.removeAll();
+        jPanel2.add(detailFilm1);
+        jPanel2.repaint();
+        jPanel2.revalidate();
+        detailFilm1.afficherTab(i);
         
         jBAccueil.setEnabled(true);
         jBFAffiche.setEnabled(true);
