@@ -190,6 +190,7 @@ public class NetFilm extends javax.swing.JFrame  {
         accueil1 = new netfilm.Accueil();
         monCompteConnecté2 = new netfilm.MonCompteConnecté();
         monCompteDéconnecté2 = new netfilm.MonCompteDéconnecté();
+        detailFilm1 = new netfilm.DetailFilm();
         jPanel3 = new javax.swing.JPanel();
         jPanelDéconnecté1 = new netfilm.JPanelDéconnecté();
         jPanelConnecté1 = new netfilm.JPanelConnecté();
@@ -271,27 +272,11 @@ public class NetFilm extends javax.swing.JFrame  {
         jPanel2.add(pageFilm2, "card6");
         jPanel2.add(pageCinéma1, "card7");
         jPanel2.add(accueil1, "card8");
-
-        monCompteConnecté2.setMinimumSize(new java.awt.Dimension(715, 398));
-        monCompteConnecté2.setPreferredSize(new java.awt.Dimension(715, 398));
-
-        javax.swing.GroupLayout monCompteConnecté2Layout = new javax.swing.GroupLayout(monCompteConnecté2);
-        monCompteConnecté2.setLayout(monCompteConnecté2Layout);
-        monCompteConnecté2Layout.setHorizontalGroup(
-            monCompteConnecté2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 753, Short.MAX_VALUE)
-        );
-        monCompteConnecté2Layout.setVerticalGroup(
-            monCompteConnecté2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 412, Short.MAX_VALUE)
-        );
-
-        jPanel2.add(monCompteConnecté2, "card9");
+        jPanel2.add(monCompteConnecté2, "card12");
 
         monCompteDéconnecté2.setMaximumSize(new java.awt.Dimension(715, 398));
-        monCompteDéconnecté2.setMinimumSize(new java.awt.Dimension(715, 398));
-        monCompteDéconnecté2.setPreferredSize(new java.awt.Dimension(715, 398));
         jPanel2.add(monCompteDéconnecté2, "card10");
+        jPanel2.add(detailFilm1, "card11");
 
         jPanel3.setLayout(new java.awt.CardLayout());
         jPanel3.add(jPanelDéconnecté1, "card2");
@@ -363,6 +348,7 @@ public class NetFilm extends javax.swing.JFrame  {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private netfilm.Accueil accueil1;
+    private netfilm.DetailFilm detailFilm1;
     private netfilm.FilmsALAffiche filmsALAffiche1;
     private javax.swing.JButton jBAccueil;
     private javax.swing.JButton jBFAffiche;
