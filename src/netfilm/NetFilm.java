@@ -272,22 +272,7 @@ public class NetFilm extends javax.swing.JFrame  {
         jPanel2.add(pageFilm2, "card6");
         jPanel2.add(pageCinéma1, "card7");
         jPanel2.add(accueil1, "card8");
-
-        monCompteConnecté2.setMinimumSize(new java.awt.Dimension(715, 398));
-        monCompteConnecté2.setPreferredSize(new java.awt.Dimension(715, 398));
-
-        javax.swing.GroupLayout monCompteConnecté2Layout = new javax.swing.GroupLayout(monCompteConnecté2);
-        monCompteConnecté2.setLayout(monCompteConnecté2Layout);
-        monCompteConnecté2Layout.setHorizontalGroup(
-            monCompteConnecté2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 753, Short.MAX_VALUE)
-        );
-        monCompteConnecté2Layout.setVerticalGroup(
-            monCompteConnecté2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 412, Short.MAX_VALUE)
-        );
-
-        jPanel2.add(monCompteConnecté2, "card9");
+        jPanel2.add(monCompteConnecté2, "card12");
 
         monCompteDéconnecté2.setMaximumSize(new java.awt.Dimension(715, 398));
         jPanel2.add(monCompteDéconnecté2, "card10");
