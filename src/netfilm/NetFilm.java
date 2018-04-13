@@ -181,12 +181,12 @@ public class NetFilm extends javax.swing.JFrame  {
     }
     
 
-    public void reserverSeanceProchaineSortie() {
+    public void reserverSeanceProchaineSortie(int i) {
         jPanel2.removeAll();
         jPanel2.add(detailFilm1);
         jPanel2.repaint();
         jPanel2.revalidate();
-        detailFilm1.afficherTab(1);
+        detailFilm1.afficherTab(i);
         
         jBAccueil.setEnabled(true);
         jBFAffiche.setEnabled(true);
