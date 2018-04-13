@@ -9,7 +9,7 @@ package netfilm;
  *
  * @author Champeau
  */
-public class NetFilm extends javax.swing.JFrame  {
+public class NetFilm extends javax.swing.JFrame {
 
     /**
      * Creates new form NetFilm
@@ -17,25 +17,25 @@ public class NetFilm extends javax.swing.JFrame  {
     public NetFilm() {
         initComponents();
         initDependencies();
-        
+
         et = EtatType.FILM;
         disconnect();
-        
+
         afficherAccueil();
     }
-    
+
     public void setEtatTypeFilm() {
         et = EtatType.FILM;
     }
-    
+
     public void setEtatTypeCinema() {
         et = EtatType.CINEMA;
     }
-    
+
     public EtatType getEtatType() {
-        return(et);
+        return (et);
     }
-    
+
     public void initDependencies() {
         accueil1.init(this);
         jPanelConnecté1.init(this);
@@ -57,55 +57,59 @@ public class NetFilm extends javax.swing.JFrame  {
         jPanel3.add(jPanelConnecté1);
         jPanel3.repaint();
         jPanel3.revalidate();
-        
-        if(ePage == EtatPage.COMPTE) {
+
+        if (ePage == EtatPage.COMPTE) {
             afficherMonCompte();
+        } else if(ePage == EtatPage.FILM_2) {
+            afficherPageFilm(2);
         }
     }
-    
+
     public void disconnect() {
         this.ec = EtatConnexion.DECONNECT;
         jPanel3.removeAll();
         jPanel3.add(jPanelDéconnecté1);
         jPanel3.repaint();
         jPanel3.revalidate();
-        
-        if(ePage == EtatPage.COMPTE) {
+
+        if (ePage == EtatPage.COMPTE) {
             afficherMonCompte();
+        } else if(ePage == EtatPage.FILM_2) {
+            afficherPageFilm(2);
         }
     }
-    
+
     public void afficherAccueil() {
         ePage = EtatPage.ACCUEIL;
-        
+
         jPanel2.removeAll();
         jPanel2.add(accueil1);
         jPanel2.repaint();
         jPanel2.revalidate();
-        
+
         jBAccueil.setEnabled(false);
         jBFAffiche.setEnabled(true);
         jBMCompte.setEnabled(true);
         jBPSortie.setEnabled(true);
     }
-    
+
     public void afficherFilmAffiche() {
         ePage = EtatPage.FILMS_AFFICHE;
-        
+
         jPanel2.removeAll();
         jPanel2.add(filmsALAffiche1);
         jPanel2.repaint();
         jPanel2.revalidate();
-        
+
         jBAccueil.setEnabled(true);
         jBFAffiche.setEnabled(false);
         jBMCompte.setEnabled(true);
         jBPSortie.setEnabled(true);
     }
-    
+
     public void afficherMonCompte() {
         ePage = EtatPage.COMPTE;
-        
+
         jPanel2.removeAll();
         switch (ec) {
             case CONNECTE:
@@ -117,85 +121,95 @@ public class NetFilm extends javax.swing.JFrame  {
         }
         jPanel2.repaint();
         jPanel2.revalidate();
-        
+
         jBAccueil.setEnabled(true);
         jBFAffiche.setEnabled(true);
         jBMCompte.setEnabled(false);
         jBPSortie.setEnabled(true);
     }
-    
+
     public void afficherProchaineSortie() {
         ePage = EtatPage.PROCHAINES_SORTIES;
-        
+
         jPanel2.removeAll();
         jPanel2.add(prochainesSorties1);
         jPanel2.repaint();
         jPanel2.revalidate();
-        
+
         jBAccueil.setEnabled(true);
         jBFAffiche.setEnabled(true);
         jBMCompte.setEnabled(true);
         jBPSortie.setEnabled(false);
     }
-    
+
     public void afficherRechercheCinema() {
         ePage = EtatPage.RECH_CINEMA;
-        
+
         jPanel2.removeAll();
         jPanel2.add(rechercheCinéma1);
         jPanel2.repaint();
         jPanel2.revalidate();
-        
+
         jBAccueil.setEnabled(true);
         jBFAffiche.setEnabled(true);
         jBMCompte.setEnabled(true);
         jBPSortie.setEnabled(true);
     }
-    
+
     public void afficherRechercheFilm() {
         ePage = EtatPage.RECH_FILM;
-                
+
         jPanel2.removeAll();
         jPanel2.add(rechercheFilm1);
         jPanel2.repaint();
         jPanel2.revalidate();
-        
+
         jBAccueil.setEnabled(true);
         jBFAffiche.setEnabled(true);
         jBMCompte.setEnabled(true);
         jBPSortie.setEnabled(true);
     }
-    
+
     public void afficherPageCinema() {
         ePage = EtatPage.CINEMA;
-                
+
         jPanel2.removeAll();
         jPanel2.add(pageCinéma1);
         jPanel2.repaint();
         jPanel2.revalidate();
-        
+
         jBAccueil.setEnabled(true);
         jBFAffiche.setEnabled(true);
         jBMCompte.setEnabled(true);
         jBPSortie.setEnabled(true);
     }
-    
+
     public void afficherPageFilm(int tab) {
-        ePage = EtatPage.FILM;
-                
+        switch (tab) {
+            case 1:
+                ePage = EtatPage.FILM_1;
+                break;
+            case 2:
+                ePage = EtatPage.FILM_2;
+                break;
+            default:
+                ePage = EtatPage.FILM_0;
+                break;
+        }
+
         detailFilm1.afficherTab(tab);
-        
+
         jPanel2.removeAll();
         jPanel2.add(detailFilm1);
         jPanel2.repaint();
         jPanel2.revalidate();
-        
+
         jBAccueil.setEnabled(true);
         jBFAffiche.setEnabled(true);
         jBMCompte.setEnabled(true);
         jBPSortie.setEnabled(true);
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -396,7 +410,6 @@ public class NetFilm extends javax.swing.JFrame  {
     private netfilm.RechercheFilm rechercheFilm1;
     // End of variables declaration//GEN-END:variables
 
-
     /**
      * @param args the command line arguments
      */
@@ -438,4 +451,12 @@ public class NetFilm extends javax.swing.JFrame  {
     private EtatConnexion ec;
     private EtatType et;
     private EtatPage ePage;
+
+    public boolean isConnected() {
+        return ec == EtatConnexion.CONNECTE;
+    }
+
+    void setEtatPage(EtatPage etatPage) {
+        ePage = etatPage;
+    }
 }
