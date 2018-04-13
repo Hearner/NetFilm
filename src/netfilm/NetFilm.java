@@ -196,6 +196,18 @@ public class NetFilm extends javax.swing.JFrame  {
         jBPSortie.setEnabled(true);
     }
     
+    public void afficherReservation() {
+        jPanel2.removeAll();
+        jPanel2.add(reservation1);
+        jPanel2.repaint();
+        jPanel2.revalidate();
+        
+        jBAccueil.setEnabled(true);
+        jBFAffiche.setEnabled(true);
+        jBMCompte.setEnabled(true);
+        jBPSortie.setEnabled(true);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -220,6 +232,7 @@ public class NetFilm extends javax.swing.JFrame  {
         monCompteConnecté2 = new netfilm.MonCompteConnecté();
         monCompteDéconnecté2 = new netfilm.MonCompteDéconnecté();
         detailFilm1 = new netfilm.DetailFilm();
+        reservation1 = new netfilm.Reservation();
         jPanel3 = new javax.swing.JPanel();
         jPanelDéconnecté1 = new netfilm.JPanelDéconnecté();
         jPanelConnecté1 = new netfilm.JPanelConnecté();
@@ -305,6 +318,7 @@ public class NetFilm extends javax.swing.JFrame  {
         monCompteDéconnecté2.setMaximumSize(new java.awt.Dimension(715, 398));
         jPanel2.add(monCompteDéconnecté2, "card10");
         jPanel2.add(detailFilm1, "card11");
+        jPanel2.add(reservation1, "card11");
 
         jPanel3.setLayout(new java.awt.CardLayout());
         jPanel3.add(jPanelDéconnecté1, "card2");
@@ -394,6 +408,7 @@ public class NetFilm extends javax.swing.JFrame  {
     private netfilm.ProchainesSorties prochainesSorties1;
     private netfilm.RechercheCinéma rechercheCinéma1;
     private netfilm.RechercheFilm rechercheFilm1;
+    private netfilm.Reservation reservation1;
     // End of variables declaration//GEN-END:variables
 
 
