@@ -9,14 +9,14 @@ package netfilm;
  *
  * @author Champeau
  */
-public class MonCompteConnecté extends javax.swing.JPanel {
+public class JPanelConnecte extends javax.swing.JPanel {
 
     private NetFilm netFilm;
     
     /**
-     * Creates new form MonCompteConnecté
+     * Creates new form JPanelConnecte
      */
-    public MonCompteConnecté() {
+    public JPanelConnecte() {
         initComponents();
     }
     
@@ -33,19 +33,33 @@ public class MonCompteConnecté extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
+
+        jButton1.setText("Deconnexion");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 458, Short.MAX_VALUE)
+            .addComponent(jButton1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 250, Short.MAX_VALUE)
+            .addComponent(jButton1)
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        netFilm.disconnect();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }
