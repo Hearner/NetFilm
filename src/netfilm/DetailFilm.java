@@ -5,6 +5,8 @@
  */
 package netfilm;
 
+import javax.swing.JTabbedPane;
+
 /**
  *
  * @author Champeau
@@ -370,9 +372,12 @@ public class DetailFilm extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbVoirLesAvisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVoirLesAvisActionPerformed
-        jTabbedPane.setSelectedIndex(1);
+        afficherTab(1);
     }//GEN-LAST:event_jbVoirLesAvisActionPerformed
-
+    
+    public void afficherTab(int i) {
+        jTabbedPane.setSelectedIndex(i);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private netfilm.AvisConnecte avisConnecte1;
