@@ -117,6 +117,12 @@ public class Reservation extends javax.swing.JPanel {
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel13.setText("Places -12 ans : ");
 
+        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
+
+        jSpinner2.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
+
+        jSpinner3.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
+
         jButton1.setText("Payer");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

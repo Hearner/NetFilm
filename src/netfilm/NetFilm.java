@@ -49,6 +49,7 @@ public class NetFilm extends javax.swing.JFrame {
         monCompteConnecté2.init(this);
         monCompteDéconnecté2.init(this);
         panelHeader1.init(this);
+        reservation1.init(this);
     }
 
     public void connect() {
