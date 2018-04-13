@@ -240,7 +240,7 @@ public class NetFilm extends javax.swing.JFrame  {
         monCompteDéconnecté1.setLayout(monCompteDéconnecté1Layout);
         monCompteDéconnecté1Layout.setHorizontalGroup(
             monCompteDéconnecté1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 716, Short.MAX_VALUE)
+            .addGap(0, 753, Short.MAX_VALUE)
         );
         monCompteDéconnecté1Layout.setVerticalGroup(
             monCompteDéconnecté1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -266,7 +266,7 @@ public class NetFilm extends javax.swing.JFrame  {
         monCompteConnecté1.setLayout(monCompteConnecté1Layout);
         monCompteConnecté1Layout.setHorizontalGroup(
             monCompteConnecté1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 716, Short.MAX_VALUE)
+            .addGap(0, 753, Short.MAX_VALUE)
         );
         monCompteConnecté1Layout.setVerticalGroup(
             monCompteConnecté1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
