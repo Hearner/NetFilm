@@ -63,6 +63,12 @@ public class ProchainesSorties extends javax.swing.JPanel {
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel6.setText("AVENGERS: INFINITY WAR");
+        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
 
         jButton1.setText("Réserver une séance");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -76,11 +82,29 @@ public class ProchainesSorties extends javax.swing.JPanel {
         jScrollPane3.setViewportView(jTextPane3);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_avengers.jpg"))); // NOI18N
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_escobar.jpg"))); // NOI18N
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel7.setText("ESCOBAR");
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
 
         jTextPane5.setEditable(false);
         jTextPane5.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nSuspendisse fermentum odio turpis, a aliquam ipsum\naliquam vitae. Suspendisse elementum accumsan tortor,\nsodales malesuada est efficitur vitae.");
@@ -94,9 +118,21 @@ public class ProchainesSorties extends javax.swing.JPanel {
         });
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_taxi5.jpg"))); // NOI18N
+        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel8.setText("TAXI 5");
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
 
         jTextPane6.setEditable(false);
         jTextPane6.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nSuspendisse fermentum odio turpis, a aliquam ipsum\naliquam vitae. Suspendisse elementum accumsan tortor,\nsodales malesuada est efficitur vitae.");
@@ -110,9 +146,21 @@ public class ProchainesSorties extends javax.swing.JPanel {
         });
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_deadpool2.jpg"))); // NOI18N
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
 
         jLabel10.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel10.setText("DEADPOOL 2");
+        jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
 
         jTextPane7.setEditable(false);
         jTextPane7.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nSuspendisse fermentum odio turpis, a aliquam ipsum\naliquam vitae. Suspendisse elementum accumsan tortor,\nsodales malesuada est efficitur vitae.");
@@ -256,6 +304,10 @@ public class ProchainesSorties extends javax.swing.JPanel {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
        netFilm.afficherPageFilm(1);
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jLabel7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MousePressed
+        netFilm.afficherPageFilm(0);
+    }//GEN-LAST:event_jLabel7MousePressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
