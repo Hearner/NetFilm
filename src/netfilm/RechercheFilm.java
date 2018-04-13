@@ -105,18 +105,42 @@ public class RechercheFilm extends javax.swing.JPanel {
         jLabel14.setText("Note moyenne : 4,5/5");
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_blackpanther.jpg"))); // NOI18N
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel2MousePressed(evt);
+            }
+        });
 
         jLabel15.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel15.setText("BLACK PANTHER");
+        jLabel15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel2MousePressed(evt);
+            }
+        });
 
         jTextPane6.setEditable(false);
         jTextPane6.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nSuspendisse fermentum odio turpis, a aliquam ipsum\naliquam vitae. Suspendisse elementum accumsan tortor,\nsodales malesuada est efficitur vitae.");
         jScrollPane6.setViewportView(jTextPane6);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_readyplayerone.jpg"))); // NOI18N
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel2MousePressed(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel7.setText("READY PLAYER ONE");
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel2MousePressed(evt);
+            }
+        });
 
         jTextPane5.setEditable(false);
         jTextPane5.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nSuspendisse fermentum odio turpis, a aliquam ipsum\naliquam vitae. Suspendisse elementum accumsan tortor,\nsodales malesuada est efficitur vitae.");
@@ -447,6 +471,10 @@ public class RechercheFilm extends javax.swing.JPanel {
     private void jCheckBox14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox14ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox14ActionPerformed
+
+    private void jLabel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MousePressed
+        netFilm.afficherPageFilm(0);
+    }//GEN-LAST:event_jLabel2MousePressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
