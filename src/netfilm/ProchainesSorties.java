@@ -57,6 +57,8 @@ public class ProchainesSorties extends javax.swing.JPanel {
         jButton5 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
+        setMinimumSize(new java.awt.Dimension(715, 398));
+
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel6.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N

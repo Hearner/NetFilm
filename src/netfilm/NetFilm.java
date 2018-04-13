@@ -11,6 +11,7 @@ package netfilm;
  */
 public class NetFilm extends javax.swing.JFrame  {
 
+    public enum EtatPage { ACCUEIL, FILMS_AFFICHE, PROCHAINES_SORTIES, FILM, CINEMA, COMPTE, RECH_FILM, RECH_CINEMA }
     /**
      * Creates new form NetFilm
      */
@@ -45,8 +46,8 @@ public class NetFilm extends javax.swing.JFrame  {
         rechercheCinéma1.init(this);
         rechercheFilm1.init(this);
         filmsALAffiche1.init(this);
-        monCompteConnecté1.init(this);
-        monCompteDéconnecté1.init(this);
+        monCompteConnecté2.init(this);
+        monCompteDéconnecté2.init(this);
         panelHeader1.init(this);
     }
 
@@ -56,6 +57,10 @@ public class NetFilm extends javax.swing.JFrame  {
         jPanel3.add(jPanelConnecté1);
         jPanel3.repaint();
         jPanel3.revalidate();
+        
+        if(ePage == EtatPage.COMPTE) {
+            afficherMonCompte();
+        }
     }
     
     public void disconnect() {
@@ -64,9 +69,15 @@ public class NetFilm extends javax.swing.JFrame  {
         jPanel3.add(jPanelDéconnecté1);
         jPanel3.repaint();
         jPanel3.revalidate();
+        
+        if(ePage == EtatPage.COMPTE) {
+            afficherMonCompte();
+        }
     }
     
     public void afficherAccueil() {
+        ePage = EtatPage.ACCUEIL;
+        
         jPanel2.removeAll();
         jPanel2.add(accueil1);
         jPanel2.repaint();
@@ -79,6 +90,8 @@ public class NetFilm extends javax.swing.JFrame  {
     }
     
     public void afficherFilmAffiche() {
+        ePage = EtatPage.FILMS_AFFICHE;
+        
         jPanel2.removeAll();
         jPanel2.add(filmsALAffiche1);
         jPanel2.repaint();
@@ -91,13 +104,15 @@ public class NetFilm extends javax.swing.JFrame  {
     }
     
     public void afficherMonCompte() {
+        ePage = EtatPage.COMPTE;
+        
         jPanel2.removeAll();
         switch (ec) {
             case CONNECTE:
-                jPanel2.add(monCompteConnecté1);
+                jPanel2.add(monCompteConnecté2);
                 break;
             case DECONNECT:
-                jPanel2.add(monCompteDéconnecté1);
+                jPanel2.add(monCompteDéconnecté2);
                 break;
         }
         jPanel2.repaint();
@@ -110,6 +125,8 @@ public class NetFilm extends javax.swing.JFrame  {
     }
     
     public void afficherProchaineSortie() {
+        ePage = EtatPage.PROCHAINES_SORTIES;
+        
         jPanel2.removeAll();
         jPanel2.add(prochainesSorties1);
         jPanel2.repaint();
@@ -122,6 +139,8 @@ public class NetFilm extends javax.swing.JFrame  {
     }
     
     public void afficherRechercheCinema() {
+        ePage = EtatPage.RECH_CINEMA;
+        
         jPanel2.removeAll();
         jPanel2.add(rechercheCinéma1);
         jPanel2.repaint();
@@ -134,6 +153,8 @@ public class NetFilm extends javax.swing.JFrame  {
     }
     
     public void afficherRechercheFilm() {
+        ePage = EtatPage.RECH_FILM;
+                
         jPanel2.removeAll();
         jPanel2.add(rechercheFilm1);
         jPanel2.repaint();
@@ -160,7 +181,6 @@ public class NetFilm extends javax.swing.JFrame  {
         jBPSortie = new javax.swing.JButton();
         jBMCompte = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        monCompteDéconnecté1 = new netfilm.MonCompteDéconnecté();
         filmsALAffiche1 = new netfilm.FilmsALAffiche();
         rechercheFilm1 = new netfilm.RechercheFilm();
         rechercheCinéma1 = new netfilm.RechercheCinéma();
@@ -168,7 +188,8 @@ public class NetFilm extends javax.swing.JFrame  {
         pageFilm2 = new netfilm.PageFilm();
         pageCinéma1 = new netfilm.PageCinéma();
         accueil1 = new netfilm.Accueil();
-        monCompteConnecté1 = new netfilm.MonCompteConnecté();
+        monCompteConnecté2 = new netfilm.MonCompteConnecté();
+        monCompteDéconnecté2 = new netfilm.MonCompteDéconnecté();
         jPanel3 = new javax.swing.JPanel();
         jPanelDéconnecté1 = new netfilm.JPanelDéconnecté();
         jPanelConnecté1 = new netfilm.JPanelConnecté();
@@ -220,7 +241,7 @@ public class NetFilm extends javax.swing.JFrame  {
                 .addComponent(jBPSortie)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jBMCompte)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(133, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -234,20 +255,9 @@ public class NetFilm extends javax.swing.JFrame  {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel2.setMinimumSize(new java.awt.Dimension(715, 398));
+        jPanel2.setPreferredSize(new java.awt.Dimension(715, 398));
         jPanel2.setLayout(new java.awt.CardLayout());
-
-        javax.swing.GroupLayout monCompteDéconnecté1Layout = new javax.swing.GroupLayout(monCompteDéconnecté1);
-        monCompteDéconnecté1.setLayout(monCompteDéconnecté1Layout);
-        monCompteDéconnecté1Layout.setHorizontalGroup(
-            monCompteDéconnecté1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 753, Short.MAX_VALUE)
-        );
-        monCompteDéconnecté1Layout.setVerticalGroup(
-            monCompteDéconnecté1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 412, Short.MAX_VALUE)
-        );
-
-        jPanel2.add(monCompteDéconnecté1, "card10");
 
         filmsALAffiche1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -262,18 +272,26 @@ public class NetFilm extends javax.swing.JFrame  {
         jPanel2.add(pageCinéma1, "card7");
         jPanel2.add(accueil1, "card8");
 
-        javax.swing.GroupLayout monCompteConnecté1Layout = new javax.swing.GroupLayout(monCompteConnecté1);
-        monCompteConnecté1.setLayout(monCompteConnecté1Layout);
-        monCompteConnecté1Layout.setHorizontalGroup(
-            monCompteConnecté1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        monCompteConnecté2.setMinimumSize(new java.awt.Dimension(715, 398));
+        monCompteConnecté2.setPreferredSize(new java.awt.Dimension(715, 398));
+
+        javax.swing.GroupLayout monCompteConnecté2Layout = new javax.swing.GroupLayout(monCompteConnecté2);
+        monCompteConnecté2.setLayout(monCompteConnecté2Layout);
+        monCompteConnecté2Layout.setHorizontalGroup(
+            monCompteConnecté2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 753, Short.MAX_VALUE)
         );
-        monCompteConnecté1Layout.setVerticalGroup(
-            monCompteConnecté1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        monCompteConnecté2Layout.setVerticalGroup(
+            monCompteConnecté2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 412, Short.MAX_VALUE)
         );
 
-        jPanel2.add(monCompteConnecté1, "card9");
+        jPanel2.add(monCompteConnecté2, "card9");
+
+        monCompteDéconnecté2.setMaximumSize(new java.awt.Dimension(715, 398));
+        monCompteDéconnecté2.setMinimumSize(new java.awt.Dimension(715, 398));
+        monCompteDéconnecté2.setPreferredSize(new java.awt.Dimension(715, 398));
+        jPanel2.add(monCompteDéconnecté2, "card10");
 
         jPanel3.setLayout(new java.awt.CardLayout());
         jPanel3.add(jPanelDéconnecté1, "card2");
@@ -287,14 +305,13 @@ public class NetFilm extends javax.swing.JFrame  {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(panelHeader1, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -356,8 +373,8 @@ public class NetFilm extends javax.swing.JFrame  {
     private javax.swing.JPanel jPanel3;
     private netfilm.JPanelConnecté jPanelConnecté1;
     private netfilm.JPanelDéconnecté jPanelDéconnecté1;
-    private netfilm.MonCompteConnecté monCompteConnecté1;
-    private netfilm.MonCompteDéconnecté monCompteDéconnecté1;
+    private netfilm.MonCompteConnecté monCompteConnecté2;
+    private netfilm.MonCompteDéconnecté monCompteDéconnecté2;
     private netfilm.PageCinéma pageCinéma1;
     private netfilm.PageFilm pageFilm2;
     private netfilm.PanelHeader panelHeader1;
@@ -407,4 +424,5 @@ public class NetFilm extends javax.swing.JFrame  {
     }
     private EtatConnexion ec;
     private EtatType et;
+    private EtatPage ePage;
 }
