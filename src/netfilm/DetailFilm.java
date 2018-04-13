@@ -13,11 +13,16 @@ import javax.swing.JTabbedPane;
  */
 public class DetailFilm extends javax.swing.JPanel {
 
+    private NetFilm netFilm;
     /**
      * Creates new form DetailFilm
      */
     public DetailFilm() {
         initComponents();
+    }
+    
+    public void init(NetFilm n) {
+        this.netFilm = n;
     }
 
     /**

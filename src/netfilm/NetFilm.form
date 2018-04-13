@@ -173,13 +173,6 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="netfilm.PageFilm" name="pageFilm2">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="card6"/>
-            </Constraint>
-          </Constraints>
-        </Component>
         <Component class="netfilm.PageCin&#xe9;ma" name="pageCin&#xe9;ma1">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">

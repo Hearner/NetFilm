@@ -41,7 +41,7 @@ public class NetFilm extends javax.swing.JFrame  {
         jPanelConnecté1.init(this);
         jPanelDéconnecté1.init(this);
         pageCinéma1.init(this);
-        pageFilm2.init(this);
+        detailFilm1.init(this);
         prochainesSorties1.init(this);
         rechercheCinéma1.init(this);
         rechercheFilm1.init(this);
@@ -180,13 +180,15 @@ public class NetFilm extends javax.swing.JFrame  {
         jBPSortie.setEnabled(true);
     }
     
-
-    public void reserverSeanceProchaineSortie(int i) {
+    public void afficherPageFilm(int tab) {
+        ePage = EtatPage.FILM;
+                
+        detailFilm1.afficherTab(tab);
+        
         jPanel2.removeAll();
         jPanel2.add(detailFilm1);
         jPanel2.repaint();
         jPanel2.revalidate();
-        detailFilm1.afficherTab(i);
         
         jBAccueil.setEnabled(true);
         jBFAffiche.setEnabled(true);
@@ -213,7 +215,6 @@ public class NetFilm extends javax.swing.JFrame  {
         rechercheFilm1 = new netfilm.RechercheFilm();
         rechercheCinéma1 = new netfilm.RechercheCinéma();
         prochainesSorties1 = new netfilm.ProchainesSorties();
-        pageFilm2 = new netfilm.PageFilm();
         pageCinéma1 = new netfilm.PageCinéma();
         accueil1 = new netfilm.Accueil();
         monCompteConnecté2 = new netfilm.MonCompteConnecté();
@@ -297,7 +298,6 @@ public class NetFilm extends javax.swing.JFrame  {
         jPanel2.add(rechercheFilm1, "card3");
         jPanel2.add(rechercheCinéma1, "card4");
         jPanel2.add(prochainesSorties1, "card5");
-        jPanel2.add(pageFilm2, "card6");
         jPanel2.add(pageCinéma1, "card7");
         jPanel2.add(accueil1, "card8");
         jPanel2.add(monCompteConnecté2, "card12");
@@ -390,7 +390,6 @@ public class NetFilm extends javax.swing.JFrame  {
     private netfilm.MonCompteConnecté monCompteConnecté2;
     private netfilm.MonCompteDéconnecté monCompteDéconnecté2;
     private netfilm.PageCinéma pageCinéma1;
-    private netfilm.PageFilm pageFilm2;
     private netfilm.PanelHeader panelHeader1;
     private netfilm.ProchainesSorties prochainesSorties1;
     private netfilm.RechercheCinéma rechercheCinéma1;

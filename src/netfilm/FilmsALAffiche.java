@@ -24,10 +24,6 @@ public class FilmsALAffiche extends javax.swing.JPanel {
         this.netFilm = n;
     }
     
-    private void appelerReserverUneSeance(int i) {
-        netFilm.reserverSeanceProchaineSortie(i);
-    }
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -67,6 +63,11 @@ public class FilmsALAffiche extends javax.swing.JPanel {
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel6.setText("CROC-BLANC");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
 
         jButton1.setText("Réserver une séance");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -80,11 +81,26 @@ public class FilmsALAffiche extends javax.swing.JPanel {
         jScrollPane3.setViewportView(jTextPane3);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_crocblanc.jpg"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_readyplayerone.jpg"))); // NOI18N
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel7.setText("READY PLAYER ONE");
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
 
         jTextPane5.setEditable(false);
         jTextPane5.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nSuspendisse fermentum odio turpis, a aliquam ipsum\naliquam vitae. Suspendisse elementum accumsan tortor,\nsodales malesuada est efficitur vitae.");
@@ -98,9 +114,19 @@ public class FilmsALAffiche extends javax.swing.JPanel {
         });
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_blackpanther.jpg"))); // NOI18N
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel8.setText("BLACK PANTHER");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
 
         jTextPane6.setEditable(false);
         jTextPane6.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nSuspendisse fermentum odio turpis, a aliquam ipsum\naliquam vitae. Suspendisse elementum accumsan tortor,\nsodales malesuada est efficitur vitae.");
@@ -114,9 +140,19 @@ public class FilmsALAffiche extends javax.swing.JPanel {
         });
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_tombraider.jpg"))); // NOI18N
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
 
         jLabel10.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel10.setText("TOMB RAIDER");
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
 
         jTextPane7.setEditable(false);
         jTextPane7.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nSuspendisse fermentum odio turpis, a aliquam ipsum\naliquam vitae. Suspendisse elementum accumsan tortor,\nsodales malesuada est efficitur vitae.");
@@ -245,20 +281,24 @@ public class FilmsALAffiche extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        appelerReserverUneSeance(1);
+        netFilm.afficherPageFilm(1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        appelerReserverUneSeance(1);
+        netFilm.afficherPageFilm(1);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        appelerReserverUneSeance(1);
+        netFilm.afficherPageFilm(1);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        appelerReserverUneSeance(1);
+        netFilm.afficherPageFilm(1);
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jLabel7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MousePressed
+        netFilm.afficherPageFilm(0);
+    }//GEN-LAST:event_jLabel7MousePressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
