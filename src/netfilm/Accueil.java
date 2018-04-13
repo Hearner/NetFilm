@@ -50,11 +50,29 @@ public class Accueil extends javax.swing.JPanel {
         jLabel3.setText("Films à l'affiche");
 
         jLFilm1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_readyplayerone.jpg"))); // NOI18N
+        jLFilm1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLFilm1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLFilm1MousePressed(evt);
+            }
+        });
 
         jLFilm2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_crocblanc.jpg"))); // NOI18N
+        jLFilm2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLFilm2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLFilm1MousePressed(evt);
+            }
+        });
 
         jLFilm3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_tombraider.jpg"))); // NOI18N
         jLFilm3.setToolTipText("");
+        jLFilm3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLFilm3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLFilm1MousePressed(evt);
+            }
+        });
 
         jBFilmAffiche.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jBFilmAffiche.setText("Voir plus...");
@@ -107,10 +125,28 @@ public class Accueil extends javax.swing.JPanel {
         jLabel4.setText("Prochaines sorties");
 
         jLFilm4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_taxi5.jpg"))); // NOI18N
+        jLFilm4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLFilm4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLFilm1MousePressed(evt);
+            }
+        });
 
         jLFilm5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_deadpool2.jpg"))); // NOI18N
+        jLFilm5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLFilm5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLFilm1MousePressed(evt);
+            }
+        });
 
         jLFilm6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images_mf/aff_avengers.jpg"))); // NOI18N
+        jLFilm6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLFilm6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLFilm1MousePressed(evt);
+            }
+        });
 
         jBProchainesSorties.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jBProchainesSorties.setText("Voir plus...");
@@ -187,6 +223,10 @@ public class Accueil extends javax.swing.JPanel {
     private void jBProchainesSortiesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBProchainesSortiesActionPerformed
         netFilm.afficherProchaineSortie();
     }//GEN-LAST:event_jBProchainesSortiesActionPerformed
+
+    private void jLFilm1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLFilm1MousePressed
+        netFilm.afficherPageFilm(0);
+    }//GEN-LAST:event_jLFilm1MousePressed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBFilmAffiche;
